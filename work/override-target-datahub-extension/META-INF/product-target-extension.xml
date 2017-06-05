@@ -1,0 +1,65 @@
+<extension xmlns="http://www.hybris.com/schema/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.hybris.com/schema/datahub-metadata-schema-1.3.0.xsd" name="product-target-extension">
+
+    <dependencies>
+        <dependency>
+            <extension>product-canonical-extension</extension>
+        </dependency>
+    </dependencies>
+
+    <targetSystems>
+        <targetSystem>
+            <name>FileAdapterTargetSystem</name>
+            <type>HybrisCore</type>
+            <exportURL/>
+            <userName/>
+            <password/>
+            <exportCodes/>
+
+            <!-- Target items and attributes -->
+            <targetItems>
+                <item>
+                    <type>TargetCatalogProduct</type>
+                    <updatable>true</updatable>
+                    <canonicalItemSource>CanonicalCatalogProduct</canonicalItemSource>
+                    <status>ACTIVE</status>
+                    <attributes>
+                        <attribute>
+                            <name>identifier</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>id.substring(1)</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>description</name>
+                            <transformationExpression>'Product info: ' + description</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>ean</name>
+                            <transformationExpression>ean</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>manufacturer</name>
+                        </attribute>
+                        <attribute>
+                            <name>unit</name>
+                            <transformationExpression>unit</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>style</name>
+                            <transformationExpression>unit + ' ' + unit.length()</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>size</name>
+                            <transformationExpression>Integer.parseInt(size)</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>category</name>
+                            <transformationExpression>category</transformationExpression>
+                        </attribute>
+                    </attributes>
+                </item>
+            </targetItems>
+        </targetSystem>
+    </targetSystems>
+</extension>

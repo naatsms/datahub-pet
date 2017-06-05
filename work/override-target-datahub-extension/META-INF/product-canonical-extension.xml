@@ -1,0 +1,69 @@
+<extension xmlns="http://www.hybris.com/schema/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.hybris.com/schema/datahub-metadata-schema-1.3.0.xsd" name="product-canonical-extension">
+
+<canonicalItems>
+    <item>
+        <type>CanonicalCatalogProduct</type>
+        <description>Canonical representation of basic business product</description>
+        <status>ACTIVE</status>
+        <attributes>
+            <attribute>
+                <name>id</name>
+                <model>
+                    <type>String</type>
+                    <primaryKey>true</primaryKey>
+                </model>
+            </attribute>
+            <attribute>
+                <name>name</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+            <attribute>
+                <name>description</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+            <attribute>
+                <name>ean</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+            <attribute>
+                <name>manufacturer</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+            <attribute>
+                <name>unit</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+            <attribute>
+                <name>style</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+            <attribute>
+                <name>size</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+            <attribute>
+                <name>category</name>
+                <model>
+                    <type>String</type>
+                </model>
+            </attribute>
+        </attributes>
+    </item>
+</canonicalItems>
+
+</extension>
