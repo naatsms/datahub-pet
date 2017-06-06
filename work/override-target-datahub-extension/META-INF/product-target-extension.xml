@@ -25,37 +25,82 @@
                     <status>ACTIVE</status>
                     <attributes>
                         <attribute>
-                            <name>identifier</name>
+                            <name>sourceID</name>
                             <localizable>false</localizable>
                             <collection>false</collection>
-                            <transformationExpression>id.substring(1)</transformationExpression>
+                            <transformationExpression>identifier</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>prodName</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>name</transformationExpression>
                         </attribute>
                         <attribute>
                             <name>description</name>
-                            <transformationExpression>'Product info: ' + description</transformationExpression>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>description</transformationExpression>
                         </attribute>
                         <attribute>
-                            <name>ean</name>
-                            <transformationExpression>ean</transformationExpression>
+                            <name>coding</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>barCode</transformationExpression>
                         </attribute>
                         <attribute>
-                            <name>manufacturer</name>
+                            <name>manuName</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>manName</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>manuAid</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>manAid</transformationExpression>
                         </attribute>
                         <attribute>
                             <name>unit</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
                             <transformationExpression>unit</transformationExpression>
                         </attribute>
                         <attribute>
                             <name>style</name>
-                            <transformationExpression>unit + ' ' + unit.length()</transformationExpression>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>style</transformationExpression>
                         </attribute>
                         <attribute>
                             <name>size</name>
-                            <transformationExpression>Integer.parseInt(size)</transformationExpression>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>size</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>sku</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>sku</transformationExpression>
                         </attribute>
                         <attribute>
                             <name>category</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
                             <transformationExpression>category</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>styleName</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>styleName</transformationExpression>
+                        </attribute>
+                        <attribute>
+                            <name>styleDescription</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>styleDescription</transformationExpression>
                         </attribute>
                     </attributes>
                 </item>
